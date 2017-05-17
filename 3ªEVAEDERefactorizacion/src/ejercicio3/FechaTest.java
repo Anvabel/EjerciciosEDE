@@ -32,6 +32,7 @@ public class FechaTest extends TestCase{
 		
 		Fecha fFebrero1 = new Fecha(29,2,2008);
 		Fecha fFebrero2 = new Fecha(19,2,2009);
+		Fecha f1900 = new Fecha(29,2,1900);
 		@Test
 		public void testValida() {
 		/* Para cada una de las fechas creadas anteriormente, hacer
@@ -56,6 +57,8 @@ public class FechaTest extends TestCase{
 			assertTrue("Fecha Febrero Correcta",fFebrero1.valida());
 			
 			assertTrue("Fecha Febrero Incorrecta",fFebrero2.valida());
+			
+			assertFalse("Fecha 1900 Bisiesto",f1900.valida());
 		}
 	
 
